@@ -1,24 +1,22 @@
 package DataBase;
-
+import java.util.*;
 
 /**
- * LibDB 클래스의 설명을 작성하세요.
+ * LibDB : USer, Book 클래스에 사용될 데이터 베이스 생성ㅇ아이고
  *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * @author (2023320023 이현회)
+ * @version (2026.10.06)
  */
 public class LibDB<T>
 {
-    // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
-    private int x;
+    private ArrayList<T> db;
 
     /**
      * LibDB 클래스의 객체 생성자
      */
     public LibDB()
     {
-        // 인스턴스 변수 초기화
-        x = 0;
+        this.db = new ArrayList<T>();
     }
 
     /**
@@ -27,9 +25,31 @@ public class LibDB<T>
      * @param  y  메소드의 샘플 파라미터
      * @return    x 더하기 y의 결과값을 반환
      */
-    public int sampleMethod(int y)
+    public void addElement(T element)
     {
-        // 여기에 코드를 작성하세요.
-        return x + y;
+        db.add(element);
     }
+
+    /**
+     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     *
+     * @param  y  메소드의 샘플 파라미터
+     * @return    x 와 y의 합
+     */
+    public T findElement(String ID)
+    {
+        d
+    }
+
+    /**
+     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     *
+     * @param  y  메소드의 샘플 파라미터
+     * @return    x 와 y의 합
+     */
+    public void printAllElements()
+    {
+        d
+    }
+
 }
