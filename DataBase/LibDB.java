@@ -2,7 +2,7 @@ package DataBase;
 import java.util.*;
 
 /**
- * LibDB : USer와 Book의 정보를 저장, 추가, 출력하는 데이터베이스 클래스
+ * LibDB : USer와 Book의 정보를 저장, 추가, 검색, 출력하는 데이터베이스 클래스
  *
  * @author (2023320023 이현회)
  * @version (2026.10.06)
