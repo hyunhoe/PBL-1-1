@@ -1,35 +1,47 @@
 package myClass;
 
-
 /**
- * User 클래스의 설명을 작성하세요.
+ * DB_Element 추상 클래스를 상속받는 User 클래스.
  *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * @author (2022320029_이상민)
+ * @version (2026.10.06)
  */
-public class User
+public class User extends DB_Element
 {
-    // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
-    private int x;
+    private String name;
+    private Integer stID;
 
     /**
-     * User 클래스의 객체 생성자
+     * User 객체를 생성하고 속성을 초기화하는 생성자.
+     * 
+     * @param stID 이용자의 고유 식별 번호.
+     * @param name 이용자의 이름.
      */
-    public User()
+    public User(int stID, String name)
     {
-        // 인스턴스 변수 초기화
-        x = 0;
+        this.stID = stID;
+        this.name = name;
     }
 
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
+     * getID 메소드 - stID를 문자열로 변환해 반환.
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * @return   stID를 변환한 문자열.
      */
-    public int sampleMethod(int y)
+    public String getID()
     {
-        // 여기에 코드를 작성하세요.
-        return x + y;
+        return String.valueOf(stID);
     }
+
+    /**
+     * toString 메소드 - 객체의 정보를 실행 결과 화면의 형식에 맞추어 문자열로 반환.
+     *
+     *
+     * @return    "[stID] name" 형식의 문자열.
+     */
+    public String toString()
+    {
+        return "[" + stID + "] " + name; 
+    }
+
 }
