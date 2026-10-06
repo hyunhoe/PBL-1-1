@@ -38,7 +38,14 @@ public class LibDB<T>
      */
     public T findElement(String ID)
     {
-        d
+        Iterator<T>it = db.iterator();
+        while(it.hasNext()){
+            T element = it.next();
+            if(ID == element){
+                return element;
+            }
+        }
+        return null; // 아무것도 반환이 안됨
     }
 
     /**
@@ -49,7 +56,7 @@ public class LibDB<T>
      */
     public void printAllElements()
     {
-        d
+        System.out.println();
     }
 
 }
