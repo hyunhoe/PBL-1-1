@@ -1,5 +1,6 @@
 package DataBase;
 import java.util.*;
+import myClass.DB_Element;
 
 /**
  * LibDB : User와 Book의 정보를 저장, 추가, 검색, 출력하는 데이터베이스 클래스
@@ -7,7 +8,7 @@ import java.util.*;
  * @author (2023320023 이현회)
  * @version (2026.10.06)
  */
-public class LibDB<T>
+public class LibDB<T extends DB_Element>
 {
     private ArrayList<T> db;
 
@@ -41,7 +42,7 @@ public class LibDB<T>
         Iterator<T>it = db.iterator();
         while(it.hasNext()){
             T element = it.next();
-            if(ID == element){
+            if(ID.equals(element.getID())){
                 return element;
             }
         }

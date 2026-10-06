@@ -31,7 +31,7 @@ public class MyApp
         userDB.addElement(user2);
         userDB.addElement(user3);
         
-        System.out.println("이용자 목록 출력");
+        System.out.println("----- 이용자 목록 출력 -----");
         printDB(userDB);
         System.out.println();
         
@@ -45,7 +45,7 @@ public class MyApp
         bookDB.addElement(book3);
         bookDB.addElement(book4);
         
-        System.out.println("책 목록 출력");
+        System.out.println("----- 책 목록 출력 -----");
         printDB(bookDB);
         System.out.println();
         
@@ -62,14 +62,14 @@ public class MyApp
         }
         
         User loanUser3 = userDB.findElement("2023320003");
-        Book loanBook3 = bookDB.findElement("B02");
+        Book loanBook3 = bookDB.findElement("B04");
         if(loanUser3 != null && loanBook3 != null){
             loanDB.put(loanUser3, loanBook3);
         }
         
-        System.out.println("대출 현황");
+        System.out.println("----- 대출 현황 -----");
         printLoanList(loanDB);
-
+        System.out.println("--------------------");
     }
 
     
