@@ -17,15 +17,13 @@ public class MyApp
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * printDB - 책 DB 또는 이용자 DB의 모든 요소를 출력하는 메소드
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * @param  db  출력할 데이터베이스
      */
-    public static <T extends DB_Element> void printDB(__ db)
+    public static <T extends DB_Element> void printDB(LibDB db)
     {
-        // 여기에 코드를 작성하세요
-        return y;
+        db.printAllElements();
     }
 
     /**
