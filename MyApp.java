@@ -6,12 +6,18 @@ import java.util.*;
 
 /**
  * 도서관 대출 시스템을 실행하는 메인 클래스.
+ * User 및 Book DB를 생성하고, 대출 처리 및 현황을 출력.
  *
  * @author (2022320029_이상민)
  * @version (26.10.06)
  */
 public class MyApp
 {
+     /**
+     * main - 프로그램의 주 진입점 메소드.
+     *
+     * @param  db  출력할 데이터베이스
+     */
     public static void main(String[] args){
         LibDB<User> userDB = new LibDB<>();
         LibDB<Book> bookDB = new LibDB<>();
@@ -66,6 +72,7 @@ public class MyApp
 
     }
 
+    
     /**
      * printDB - 책 DB 또는 이용자 DB의 모든 요소를 출력하는 메소드
      *
@@ -77,10 +84,10 @@ public class MyApp
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * printLoanList - 대출 DB에 저장된 대출 현황을 출력하는 메소드.
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * @param  loanDB 출력할 대출 정보가 담긴 HashMap(Key: User, Value: Book)
+     * 
      */
     public static void printLoanList(HashMap<User, Book> loanDB)
     {
