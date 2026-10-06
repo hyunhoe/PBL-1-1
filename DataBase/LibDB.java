@@ -56,7 +56,9 @@ public class LibDB<T>
      */
     public void printAllElements()
     {
-        System.out.println();
+        for(T element : db){
+            System.out.println(element);
+        }
     }
 
 }
