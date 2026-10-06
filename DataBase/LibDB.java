@@ -2,7 +2,7 @@ package DataBase;
 import java.util.*;
 
 /**
- * LibDB : USer, Book 클래스에 사용될 데이터 베이스 생성ㅇ아이고
+ * LibDB : USer와 Book의 정보를 저장, 추가, 출력하는 데이터베이스 클래스
  *
  * @author (2023320023 이현회)
  * @version (2026.10.06)
@@ -13,17 +13,17 @@ public class LibDB<T>
 
     /**
      * LibDB 클래스의 객체 생성자
+     * 
      */
-    public LibDB()
+    public LibDB() 
     {
         this.db = new ArrayList<T>();
     }
 
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
+     * addElement - 데이터베이스에 요소를 추가하는 메소드
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * @param  element  추가할 객체
      */
     public void addElement(T element)
     {
@@ -31,10 +31,10 @@ public class LibDB<T>
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * findElement - 학번 또는 책 이름과 동일한 요소를 데이터베이스에서 찾는 메소드
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * @param  ID  학번 또는 책 이름
+     * @return    동일한 요소를 찾은 경우 element를 반환, 찾지 못한 경우 null을 반환
      */
     public T findElement(String ID)
     {
@@ -49,10 +49,7 @@ public class LibDB<T>
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * printAllElements - 데이터베이스의 모든 요소들을 출력하는 메소드
      */
     public void printAllElements()
     {
